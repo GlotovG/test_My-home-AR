@@ -23,8 +23,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
+        //Отображение дома и деревьев, которые сделаны в редакторе
+        loadSweetHome()
+        
+    }
+    
+    func loadSweetHome() {
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let scene = SCNScene(named: "art.scnassets/SceneKit Scene.scn")!
         
         // Set the scene to the view
         sceneView.scene = scene
